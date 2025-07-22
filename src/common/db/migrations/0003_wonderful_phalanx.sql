@@ -1,0 +1,2 @@
+ALTER TABLE "users_sessions" DROP CONSTRAINT "users_user_id_unique";--> statement-breakpoint
+ALTER TABLE "users_sessions" ADD CONSTRAINT "users_sessions_user_id_users_user_id_fk" FOREIGN KEY ("user_id") REFERENCES "public"."users"("user_id") ON DELETE cascade ON UPDATE no action;

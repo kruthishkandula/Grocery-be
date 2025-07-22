@@ -1,0 +1,1 @@
+ALTER TABLE "users_sessions" ADD CONSTRAINT "users_user_id_unique" UNIQUE("session_token");
