@@ -10,6 +10,8 @@ import { ORDERS } from "./ORDERS";
 import { PRODUCTS } from "./PRODUCTS";
 import { CATEGORIES } from "./CATEGORIES";
 import { UPLOADS } from "./UPLOADS/index";
+import { DASHBOARDCMS } from "./CMS/dashboard";
+import { BANNERSCMS } from "./CMS/banners";
 const router = express.Router();
 
 // Multer setup for file uploads
@@ -46,5 +48,7 @@ router.use("/categories", authenticate, CATEGORIES);
 router.use("/products", authenticate, PRODUCTS);
 router.use("/orders", authenticate, ORDERS);
 router.use("/uploads", authenticate, UPLOADS);
+router.use("/cms/dashboard", DASHBOARDCMS);
+router.use("/cms/banners", BANNERSCMS);
 
 export { router as routes };
