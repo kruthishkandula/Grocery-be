@@ -42,6 +42,18 @@ const job = new CronJob("*/14 * * * *", () => {
     .on("error", (e) => {
       console.error("Error on API call", e);
     });
+
+    https
+    .get("https://chat-app-8ns1.onrender.com/api/ping", (res) => {
+      if (res.statusCode === 200) {
+        console.log("Get Request successful", "https://chat-app-8ns1.onrender.com/api/ping");
+      } else {
+        console.log("Get Request failed", "https://chat-app-8ns1.onrender.com/api/ping");
+      }
+    })
+    .on("error", (e) => {
+      console.error("Error on API call", e);
+    });
 });
 
 export default job;
