@@ -27,7 +27,7 @@ if (ENV.NODE_ENV === "prod") {
   job.start();
 }
 
-const allowedOrigins = ['https://groceryadminportal.onrender.com', 'http://localhost:3000', 'http://localhost:3002','http://localhost:3001'];
+const allowedOrigins = [process.env.WEB_URL, 'http://localhost:3000', 'http://localhost:3002','http://localhost:3001'];
 
 // CORS middleware setup
 app.use(cors({
