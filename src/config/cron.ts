@@ -32,11 +32,11 @@ const job = new CronJob("*/14 * * * *", () => {
     });
 
   https
-    .get("https://groceryplusstrapicms-1.onrender.com/api/about", (res) => {
+    .get("https://portfolio-v2-d9ev.onrender.com/api/health", (res) => {
       if (res.statusCode === 200) {
-        console.log("Get Request successful", "https://groceryplusstrapicms-1.onrender.com/api/about");
+        console.log("Get Request successful", "https://portfolio-v2-d9ev.onrender.com/api/health");
       } else {
-        console.log("Get Request failed", "https://groceryplusstrapicms-1.onrender.com/api/about");
+        console.log("Get Request failed", "https://portfolio-v2-d9ev.onrender.com/api/health");
       }
     })
     .on("error", (e) => {
